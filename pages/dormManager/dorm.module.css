@@ -135,3 +135,71 @@
 .sendBtn:hover{
   background-color: black;
 }
+.Boxgrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 80px;
+}
+.Box {
+  display: grid;
+  transform: translate(-140px , 0px);
+  grid-template-columns: 100%;
+    
+}
+.Box1 {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0px 2px 15px;
+  
+  margin-bottom: 35px;
+  text-decoration: none;
+}
+.Box2 {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  margin-left: 20px;
+  border-radius: 30px;
+  box-shadow: 0px 2px 15px;
+  text-decoration: none;
+}
+.Box3 {
+  width: 350%;
+  height: 200px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0px 2px 15px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.Box3:hover {
+  transform:translateY(-20px)
+}
+.Box1:hover {
+  transform:translateY(-20px)
+}
+.Box2:hover {
+  transform:translateY(-20px)
+}
+.icon {
+  transform: translate(20px , 50px);
+}
+.iconarrowbottom {
+  transform: translate(20px , -60px);
+}
+.iconarrowbottom1 {
+  transform: translate(215px , -50px);
+}
+.iconarrowbottom2 {
+  transform: translate(5px , 50px);
+}
+.Text {
+  transform: translate(5px , 50px);
+  color: black;
+}
+.Textbox {
+  transform: translate(5px , 55px);
+  color: black;
+}

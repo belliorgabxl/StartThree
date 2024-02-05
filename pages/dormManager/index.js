@@ -82,7 +82,25 @@ const  sendDataCheck = async()=>{
             <Navbar/>
             <div className={styles.container}>
 
-              {/* ปอทำส่วนนี้นะครับ */}
+                <div className={styles.Boxgrid}>
+                    <Link href= "/dormManager/addRoom" className={styles.Box1}>
+                        <img className={styles.icon} src="/addroom.png" width={100} height={100}></img>
+                        <img className={styles.iconarrowbottom} src="/circle.png" width={20} height={20}></img>
+                        <div className={styles.Text}>เพิ่มห้อง</div>
+                    </Link>
+                    <Link href= "/dormManager/check" className={styles.Box2}>
+                        <img className={styles.icon} src="/checkview.png" width={100} height={100}></img>
+                        <img className={styles.iconarrowbottom} src="/circle.png" width={20} height={20}></img>
+                        <div className={styles.Text}>ตรวจสอบ</div>
+                    </Link>
+                </div>
+                <div className={styles.Box}>
+                    <Link href="/dormManager/manageRoom" className={styles.Box3}>
+                        <img className={styles.iconarrowbottom1} src="/circle.png" width={20} height={20}></img>
+                        <img className={styles.iconarrowbottom2} src="/edit.png" width={100} height={100}></img>
+                        <div className={styles.Textbox}>แก้ไข</div>
+                    </Link>
+                </div>
 
             </div>
             <Footer/>
