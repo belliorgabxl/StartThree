@@ -4,6 +4,7 @@ import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet";
 import style from "../MarkerMap/mark.module.css";
+import Link from 'next/link';
 
 const position = [13.729806, 100.778082];
 
@@ -13,7 +14,7 @@ const Map = ({ searchlocat }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/Dors/getDors");
+        const res = await fetch("http://localhost:3000/api/getDors");
         const json = await res.json();
 
         if (json && json.dormitory && Array.isArray(json.dormitory)) {
@@ -52,16 +53,16 @@ const Map = ({ searchlocat }) => {
           return (
             <Marker key={item._id} position={[lat, long]}>
               <Popup>
-                <div>
+                <Link href={"/Room/"+item._id} key={item._id}>
                   <h3>{item.dorm_name}</h3>
                   <p>Type: {item.type}</p>
                   <p>Location: {item.location}</p>
                   <img src={item.img} alt={item.dorm_name} style={{ maxWidth: "100%" }} />
                   <p>Price: {item.price}</p>
                   <p>Details: {item.detail}</p>
-                </div>
+                </Link>
               </Popup>
-              <Tooltip permanent direction="top">{item.price} Bath</Tooltip>
+              <Tooltip permanent direction="top">{item.price} ฿</Tooltip>
             </Marker>
 
           );
