@@ -37,8 +37,8 @@ export default function manageRoom() {
       <Navbar/>
       <div className={styles.container}>
         <div className={styles.Texthead}>
-          <h1> ห้องที่ลงทะเบียน</h1>
-          id name  : {user_id}
+          <h1> การจองของฉัน</h1>
+          คุณ  : {user_id}
         </div>
 
         <div >

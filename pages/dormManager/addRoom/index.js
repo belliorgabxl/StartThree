@@ -26,7 +26,7 @@ export default function addRoom(){
     },[])
   const handleSubmitt = async (e) => {
     e.preventDefault();
-    if(!type || !dorm_name || !location || !img || !price || !detail || !lat || !long || !cont ){
+    if(!type || !dorm_name || !location || !img || !price || !detail || !lat || !long || !cont || !create_by){
       console.log("Error!");
       alert("empty!!!");
     }
@@ -59,44 +59,49 @@ export default function addRoom(){
 
       <div className={styles.Boxgrid}>
         <div className={styles.Box2}>
-          <img className={styles.iconuser} src="/users.png" width={200} height={200}></img>
+          <img className={styles.icondorm} src="/dorm.png" width={200} height={200}></img>
+          <img className={styles.iconline} src="/line.png" width={200} height={200}></img>
         </div>
 
         <div className={styles.Box1}>
            <form onSubmit={handleSubmitt} className={styles.form_box} >
           <div className={styles.titleform}>
-            ลงทะเบียนห้อง
+            เพิ่มหอพัก
           </div>
 
 
-        <input className={styles.input_box2} placeholder="roomtpye" type="text"
+        <input className={styles.input_box2} placeholder="ประเภทห้อง" type="text"
         onChange={(e) => setType(e.target.value)} value={type} />
 
-        <input className={styles.input_box3} placeholder="dormitory name" type="text"
+        <input className={styles.input_box3} placeholder="ชื่อหอพัก" type="text"
         onChange={(e) => setName(e.target.value)} value={dorm_name}/> 
 
-        <input className={styles.input_box4} placeholder="location" type="text"
+        <input className={styles.input_box4} placeholder="บริเวณที่ตั้ง" type="text"
         onChange={(e) => setLocat(e.target.value)} value={location}/>
 
-        <input className={styles.input_box5} placeholder="lat" type="text"
+        <input className={styles.input_box5} placeholder="ละติจูด" type="text"
         onChange={(e) => setLat(e.target.value)} value={lat} />
 
-        <input className={styles.input_box6} placeholder="long" type="text"
+        <input className={styles.input_box6} placeholder="ลองจิจูด" type="text"
         onChange={(e) => setLong(e.target.value)} value={long} />
 
-        <input className={styles.input_box7} placeholder="img URL" type="text"
+        <input className={styles.input_box7} placeholder="ภาพห้องพัก" type="text"
         onChange={(e) => setImg(e.target.value)} value={img}/>
 
-        <input className={styles.input_box8} placeholder="cont" type="text"
+        <input className={styles.input_box8} placeholder="ระยะเวลาของสัญญา" type="text"
         onChange={(e) => setCont(e.target.value)} value={cont} />
 
-        <input className={styles.input_box9} placeholder="price" type="text"
+        <input className={styles.input_box9} placeholder="ราคาห้องพักต่อเดือน" type="text"
         onChange={(e) => setPrice(e.target.value)} value={price}/>
 
-        <input className={styles.input_detail} placeholder="detail" type="text"
+        <input className={styles.input_detail} placeholder="รายละเอียดหอพัก" type="text"
          onChange={(e) => setDetail(e.target.value)} value={detail}/>
 
-        <button type="submit" className={styles.send_btn}>Send data</button>
+
+        
+
+
+        <button type="submit" className={styles.send_btn}>ยืนยัน</button>
         </form>
         </div>
       </div>
